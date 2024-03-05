@@ -26,9 +26,3 @@
   
 - Endpoints untuk Delete: /api/delete_product/<int:id>
   
-Endpoints untuk Create: /api/product Request Body: 
-{ "jsonrpc": "2.0", 
-"params": 
-{ 
-  "name": "product_name", "price": product_price, "description": "product_description" } 
-  }
