@@ -1,0 +1,54 @@
+<odoo>
+  <data>
+      <!-- View Tree -->
+
+      <record id="data_product_view_tree" model="ir.ui.view">
+        <field name="name">data.product.tree</field>
+        <field name="model">data.product</field>
+        <field name="arch" type="xml">
+            <tree string="Product Information">
+              <field name="name"/>
+              <field name="price"/>
+              <field name="description"/>
+              <field name="qty_available"/>
+            </tree>
+        </field>
+      </record>
+
+      <!-- View Form -->
+
+      <record id="data_product_view_form" model="ir.ui.view">
+        <field name="name">data.product.form</field>
+        <field name="model">data.product</field>
+        <field name="arch" type="xml">
+            <form string="Product Information">
+              <sheet>
+                <group>
+                  <field name="name"/>
+                  <field name="price"/>
+                  <field name="description"/>
+                  <field name="qty_available"/>
+                </group>
+              </sheet>
+            </form>
+        </field>
+      </record>
+
+      <!-- Action/Event -->
+
+      <record id="data_product_action" model="ir.actions.act_window">
+        <field name="name">Product</field>
+        <field name="res_model">data.product</field>
+        <field name="view_mode">tree,form</field>
+      </record>
+
+      <!-- Menu Dashboard -->
+
+      <menuitem id="menu_dashboard_data_product" name="Data Product" web_icon="data_product,static/description/icon.png"/>
+
+      <!-- Menu Item -->
+
+      <menuitem id="menu_item_data_product" name="Data Product" parent="menu_dashboard_data_product" action="data_product_action"/>
+
+  </data>
+</odoo>
